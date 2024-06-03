@@ -33,9 +33,7 @@ $mysqli->close();
     <meta name="description" content="Join our vibrant colony, fight boredom and own unique proof of action tokens. Redefine excitement in a world of thrilling adventures.">
     <meta name="keywords" content="nft, nfts, web3, community, dao, blockchain, proof of action nfts">
     <meta name="author" content="The Genie Rats">
-
-    <link rel="stylesheet" href="/data/main.css">
-    <link rel="icon" href="/data/thegenierats.ico" type="image/x-icon">
+    <?php include 'data/parts/includes.php'; ?>    
   </head>
   <body>
     <?php include 'data/parts/header.php'; ?>
@@ -92,6 +90,30 @@ $mysqli->close();
                     <a href="/challenges"><button>Details</button></a>
                 </div>
             </div>
+        </article>
+        <?php /*
+        <article id="roadmap">
+            <div>
+                <h2>Roadmap</h2>
+                <p>This is a rough representation of what we plan to do. <br/>We'll share detailed announcements in the updates section from <a href="/discord" target="_blank">our Discord</a> server.</p>
+                <h3>Q3 2023</h3>
+                <ul>
+                    <li>Launch community Discord server.</li>
+                    <li>Launch merch shop for supporting members.</li>
+                    <li>Launch website.</li>
+                </ul>
+                <h3>Q4 2023</h3>
+                <ul>
+                    <li>Launch generative 10000 unique profile picture NFTs.</li>
+                    <li>Add website registration and login using Discord.</li>
+                </ul>
+                <h3>Q1 2024</h3>
+                <ul>
+                    <li>Develop mobile app for challenges (Android and iOS).</li>
+                    <li>Add option to mint NFTs on multiple blockchains.</li>
+                </ul>
+            </div>
+            <img src="/data/images/site/roadmap.png" alt="TheGenieRats Roadmap" title="Let's plan this out!">
         </article>
         <div id="collection">
             <div>
@@ -161,6 +183,7 @@ $mysqli->close();
                 </div>
             </div>
         </div>
+        */ ?>
     </main>
     <?php include 'data/parts/footer.php'; ?>
   </body>

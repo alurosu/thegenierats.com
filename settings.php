@@ -129,8 +129,7 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Account Settings - The Genie Rats</title>
-    <link rel="stylesheet" href="/data/main.css?v=50">
-    <link rel="icon" href="/data/thegenierats.ico" type="image/x-icon">
+    <?php include 'data/parts/includes.php'; ?>    
   </head>
   <body>
     <?php include 'data/parts/header.php'; ?>
@@ -149,9 +148,9 @@ $mysqli->close();
                 <?php } ?>
             </div>
         </div>
-        <div class="profile-menu">
+        <div class="profile-menu py-3">
             <h2>Account Settings</h2>
-            <ul>
+            <ul class="m-0">
                 <li data-show="email">
                     Email
                 </li>
@@ -169,7 +168,7 @@ $mysqli->close();
                 </li>
             </ul>
         </div>
-        <div class="settings">  
+        <div class="settings mt-3">  
             <form action="" method="post" enctype="multipart/form-data" id="change-avatar">
                 <input type="file" name="fileToUpload" id="fileToUpload"><input type="submit" value="Upload Image" name="submit">
             </form>

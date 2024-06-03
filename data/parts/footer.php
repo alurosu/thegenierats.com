@@ -6,10 +6,8 @@
         <li>
             <a href="/discord" target="_blank">Discord</a>
         </li>
-        <li>
-            <a href="" target="_blank">OpenSea</a>
-        </li>
     </ul>
+    <div class="col-12 pt-2 pb-4 fs-6 text-center text-body-secondary">&#169; The Genie Rats <?PHP echo date('Y');?></div>
 </footer>
 
 <?php if ($error) { ?>

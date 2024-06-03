@@ -101,7 +101,6 @@ header > div {
     max-width: 1000px;
     margin: auto;
     width: 100%;
-    padding: 0.6em 1em;
     box-sizing: border-box;
 
     display: flex;
@@ -587,8 +586,8 @@ footer ul li {
     align-items: center;
 }
 #user-entries > div .video svg {
-    width: 2em;
-    height: 2em;
+    width: 4em;
+    height: 3.5em;
     padding: 0.65em;
 }
 #user-entries > div .video svg path{
@@ -617,7 +616,6 @@ footer ul li {
 #user-entries > div .title .votes {
     color: #9c9c9c;
     font-size: 0.8em;
-    padding: 0.2em 0;
 }
 .add-challenge-details {
     font-size: 0.75em;

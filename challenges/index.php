@@ -41,8 +41,7 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Challenges - The Genie Rats</title>
-    <link rel="stylesheet" href="/data/main.css?v=10">
-    <link rel="icon" href="/data/thegenierats.ico" type="image/x-icon">
+    <?php include '../data/parts/includes.php'; ?>    
   </head>
   <body>
     <?php include '../data/parts/header.php'; ?>

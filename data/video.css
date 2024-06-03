@@ -46,7 +46,7 @@ a:hover {
 }
 svg {
     vertical-align: middle;
-    height: 2em;
+    height: 3em;
     padding: 0.5em;
     cursor: pointer;
 }
@@ -71,7 +71,7 @@ main {
     aspect-ratio: 9 / 16;
 }
 .instagram {
-    margin-top: -10px;
+    margin-top: -54px;
 }
 .instagram iframe {
     height: 128%;
