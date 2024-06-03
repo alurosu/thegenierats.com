@@ -736,6 +736,7 @@ footer ul li {
     margin: 0 0.5em 0 0;
     font-size: 0.8em;
     width: 3em;
+    box-sizing: initial;
 }
 #feed-rat {
     min-width: 4em;

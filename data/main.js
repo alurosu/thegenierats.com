@@ -93,6 +93,7 @@ $(document).ready(function() {
                     $('<div class="form-errors alert-box">'+msg.error+' <span>x</span></div>').appendTo('body');
                 } else {
                     $(".level span").html("Level "+msg.rat.lvl);
+                    $('#img image').attr('xlink:href', '/data/images/site/rats/'+msg.rat.lvl+'.gif')
                     $(".coins span").html(msg.trainer.coins);
     
                     $('<div class="feed-floating-number">+'+msg.rat.xpdelta+' xp</div>').appendTo('.profile-stats').css({top: y, left: x}).fadeIn(0).animate({top:y-100}, 700, function(){
