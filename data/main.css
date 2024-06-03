@@ -1,0 +1,937 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+}
+p {
+    line-height: 1.4;
+}
+a {
+    color:#529EAF;
+    text-decoration: none;
+  
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: tomato;
+}
+input {
+    border: 1px solid #D9D9D9;
+    border-radius: 0.5em;
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 0.75em;
+    padding: 0.5em 0.75em;
+}
+button {
+    background: #5E2C38;
+    border: 1px solid #5E2C38;
+    border-radius: 0.5em;
+    color: #F6E3B0;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 0.5em 0.75em;
+    
+    transition: 0.3s ease;
+}
+button:hover {
+    background: #D08D53;
+    color: #fff;
+}
+img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+.loader {
+    width: 0.3em;
+    height: 1em;
+    border-radius: 0.3em;
+    margin: auto;
+    display: block;
+    position: relative;
+    background: currentColor;
+    color: #F6E3B0;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.3s linear infinite alternate;
+} 
+.loader::after, .loader::before {
+    content: '';
+    width: 0.3em;
+    height: 1em;
+    border-radius: 0.3em;
+    background: currentColor;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.5em;
+    box-sizing: border-box;
+    animation: animloader 0.3s  0.45s  linear infinite alternate;
+}
+.loader::before {
+    left: -0.5em;
+    animation-delay: 0s;
+}
+  
+@keyframes animloader {
+    0%   { height: 1em} 
+    100% { height: 0.15em}
+}
+
+header {
+    background: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 1px solid #cdd5ea;
+    z-index: 999;
+}
+header > div {
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+    padding: 0.6em 1em;
+    box-sizing: border-box;
+
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 3.4em;
+}
+header #logo {
+    display: flex;
+}
+header #logo h1 {
+    margin: 0;
+    font-size: 1em;
+}
+header nav {
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header nav a {
+    padding: 0em 0.5em 0 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+header nav a span {
+    display: none;
+}
+header nav img {
+    height: 1.5em;
+    width: 1.5em;
+    aspect-ratio: 1/1;
+    vertical-align: middle;
+}
+header nav .x {
+    font-size: 0.85em;
+}
+header nav .discord {
+    filter: invert(37%) sepia(27%) saturate(3415%) hue-rotate(216deg) brightness(95%) contrast(93%);
+}
+header nav .account {
+    border-left: 1px solid #ccc;
+    margin-left: 0.5em;
+    padding-left: 1.2em;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-align: right;
+}
+header nav .coins {
+    color: #D08D53;
+    display: block;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0.2em;
+}
+header nav .coins span {
+    display: inline;
+}
+header nav .coins img {
+    display: inline;
+    padding-left: 0.3em;
+    height: 1.2em;
+    width: auto;
+}
+
+header nav .menu-open, header nav .menu-closed {
+    cursor: pointer;
+    display: none;
+    filter: invert(33%) sepia(9%) saturate(0%) hue-rotate(146deg) brightness(92%) contrast(95%);
+    padding-right: 0.5em;
+}
+
+header nav .mobile-menu.show {
+    display: block;
+    width: 100%;
+    padding-top: 1em;
+    position: fixed;
+    left: 0;
+    top: 3.4em;
+    background: white;
+    padding: 1em;
+    border-top: 1px solid #cdd5ea;
+    border-bottom: 1px solid #cdd5ea;
+    box-sizing: border-box;
+}
+header nav .show a {
+    display: block;
+    padding: 0.5em 0 1em 0;
+    text-align: left;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+}
+header nav .show a span {
+    display: inline;
+    padding-left: 0.5em;
+    vertical-align: middle;
+}
+header nav .show a:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 3.4em 2em 2em 2em;
+}
+
+.alert-box {
+    position: fixed;
+    top: 4.2em;
+    padding: 0.5em 1em !important;
+    left: 35%;
+    width: 30% !important;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color: #bce8f1;
+    color: #31708f;
+    background: #f8ffff;
+    border: 1px solid #bedfe6;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.alert-box span {
+    cursor: pointer;
+    padding-left: 1em;
+    user-select: none;
+}
+
+.form-errors {
+    background-color: #FEE;
+    border: 1px solid #EDD;
+    color: #A66;
+}
+.form-footer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+footer ul li {
+    list-style: none;
+    margin: 0 1em;
+}
+
+/* home page */
+#homepage {
+    display: block;
+    padding: 3.4em 0 2em 0;
+}
+#homepage article {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+#homepage img {
+    max-width: 30%;
+}
+#homepage #about {
+    padding: 3em 0em;
+    background-color: #fafafa;
+    border-bottom: 1px solid #dedede;
+    max-width: 100%;
+}
+#homepage #about > div {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+#about img {
+    max-width: 50%;
+}
+#about > div > div {
+    max-width: 50%;
+    padding: 0 2em;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+#community {
+    background-color: #529EAF;
+    color: #fff;
+    font-weight: bold;
+    min-height: 100px;
+    text-align: center;
+    margin: 5em 0;
+    padding: 1em 0;
+}
+#community div {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2em;
+    text-align: center;
+}
+#community a {
+    box-sizing: border-box;
+    padding: 0 1em;
+    color: #fff;
+    vertical-align: top;    
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+#community a img {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(157deg) brightness(101%) contrast(102%);
+    aspect-ratio: 1/1;
+    max-width: 10em;
+    padding: 0 2em;
+}
+#community a p {
+    font-size: 2em;
+    text-align: left;
+}
+#community a p span {
+    font-size: 0.8em;
+}
+#challenge-summary {
+    font-size: 1.4em;
+}
+#challenge-summary img {
+    max-width: 35%;
+}
+#challenge-summary > div {
+    max-width: 64%;
+}
+#challenge-summary .form-footer {
+    font-size: 0.8em;
+}
+#challenge-summary button {
+    font-size: 1em;
+}
+#collection {
+    min-height: 100px;
+    text-align: center;
+    margin-top: 3em;
+    padding: 2em 0;
+}
+#collection > div {
+    max-width: 1000px;
+    margin: auto;
+}
+#collection .nfts {
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#collection .nfts .element {
+    width: 16%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #9c9c9c;
+    padding: 0 0.5em 2em 0.5em;
+}
+#collection .nfts .element img {
+    width: 100%;
+    max-width: 100%;
+    border:1px solid #aaa;
+}
+#collection .nfts .element span {
+    font-size: 0.8em;
+    text-align: left;
+}
+#collection .nfts .element span.price {
+    color: #272727;
+    padding-bottom: 0.2em;
+    line-height: 1.5;
+}
+#collection .nfts .element a.id {
+    font-weight: bold;
+    font-size: 1em;
+    color: #529EAF;
+    padding: 0.3em 0;
+}
+#collection .nfts .element a.id:hover {
+    color: tomato;
+}
+#collection h2 {
+    color: #5E2C38;
+    padding-bottom: 0.7em;
+    font-size: 2.4em;
+}
+#collection .sync {
+    color: #ccc;
+    font-size: 0.8em;
+    text-align: right;
+    width: 100%;
+    padding: 0 1em;
+}
+#collection .more {
+    padding: 2em 0 0.5em 0;
+    clear: both;
+    display: inline-block;
+}
+#collection .more p {
+    padding: 0 2em;
+}
+#collection .more a {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: tomato;
+}
+#homepage #roadmap {
+    padding-top: 3em;
+}
+#roadmap h2 {
+    font-size: 2.4em;
+}
+#roadmap img {
+    max-width: 400px;
+}
+#roadmap > div {
+    max-width: 50%;
+}
+
+/* user registration */
+#login .center_image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#login form, #register form {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+#login form h2, #register form h2 {
+    margin-bottom: 0;
+}
+#register .terms {
+    color: grey;
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+/* challenges */
+#challenges {
+    display: block;
+    padding: 3.4em 0 2em 0;
+}
+#challenges article {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em 1em;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+#challenges article img {
+    max-width: 250px;
+    padding-right: 1em;
+}
+#user-entries {
+    text-align: center;
+    padding: 3em 0 2em 0;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+#user-entries h2 {
+    color: #5E2C38;
+    margin: 0;
+}
+#user-entries .details {
+    font-size: 0.8em;
+    color: #9c9c9c;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+#user-entries .more {
+    margin-top: 2em;
+    color: tomato;
+    display: inline-block;
+}
+#user-entries > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+#user-entries > div:nth-child(even) {
+    background-color: #fafafa;
+}
+
+#countdown-wrapper {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    background-color: #FAFAFA;
+    font-size: 0.75em;
+}
+#countdown-wrapper ul {
+    padding: 0;
+    margin: 0;
+}
+#countdown li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    color: #9c9c9c;
+}
+#countdown li span {
+    display: block;
+    font-size: 2em;
+    color: #333;
+}
+#countdown div {
+    font-size: 1.5em;
+    padding: 1em;
+    color: #333;
+}
+#add-challenge-button {
+    display: none;
+}
+
+#user-entries > div .rank {
+    color: #9c9c9c;
+    padding-right: 1em;
+    margin-right: 0.5em;
+    border-right: 1px solid #ccc;
+    min-width: 4em;
+}
+#user-entries > div .rank div {
+    font-size: 2em;
+    color: #333;
+}
+#user-entries > div .user a {
+    font-weight: bold;
+}
+#user-entries > div .video {
+    aspect-ratio: 1/1;
+    background-image: url("/data/images/users/default.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.user-page #user-entries > div .video {
+    background: none;
+}
+#user-entries > div .video div {
+    background-color: #ffffff73;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#user-entries > div .video svg {
+    width: 2em;
+    height: 2em;
+    padding: 0.65em;
+}
+#user-entries > div .video svg path{
+    fill: #00000059;
+}
+.user-page #user-entries > div a svg path {
+    fill: #529EAF;
+}
+.user-page #user-entries > div a:hover svg path {
+    fill: tomato;
+}
+#user-entries > div .title {
+    color: #272727;    
+    flex: 1;
+    text-align: left;
+    padding: 0 1em;
+    min-width: 0
+}
+#user-entries > div .title > * {
+    display: block;
+    height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#user-entries > div .title .votes {
+    color: #9c9c9c;
+    font-size: 0.8em;
+    padding: 0.2em 0;
+}
+.add-challenge-details {
+    font-size: 0.75em;
+    color: #9c9c9c;
+    padding-top: 4em;
+    text-align: center;
+}
+
+
+/* user page */
+.user-page {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+}
+.user-page > div {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+.user-page .profile {
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.user-page .profile svg {
+    width: 50%;
+}
+.outer-border {
+    stroke-width: 3;
+    stroke: #ccc;
+}
+.inner-border {
+    stroke-width: 2;
+    stroke: #FAFAFA;
+}
+.user-page .profile-info {
+    padding: 0 1em;
+}
+.user-page .profile-info button {
+    font-size: 0.9em;
+}
+.user-page > .profile-name img {
+    height: 3em;
+    width: auto;
+    max-width: 6em;
+    margin: 0 1em;
+}
+.user-page > .profile-name {
+    font-size: 2em;
+    border-bottom: 1px solid #eee;
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-page .profile-name h2 {
+    color: #D08D53;
+    font-size: 1.4em;
+    margin: 0;
+}
+.user-page .profile-name h2.genie {
+    color: #529EAF;
+    font-weight: bold;
+}
+.user-page .profile-name span {
+    color: #5E2C38;
+}
+.user-page .profile-name div {
+    border-left: 1px solid #eee;
+    padding-left: 1em;
+}
+.user-page .profile-stats {
+    margin-bottom: 1em;
+}
+.user-page .profile-stats h3 {
+    margin: 0;
+    padding: 0.4em 0;
+    color: #D08D53;
+    font-size: 1.3em;
+}
+.user-page .profile-stats .level {    
+    padding: 0.5em;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    color: #5E2C38;
+
+    position: relative;
+    z-index: 1;
+    min-width: 10em;
+    
+    box-sizing: border-box;
+}
+.user-page .profile-stats .level .bar {
+    transition: 0.3s ease; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F6E3B0;
+    z-index: -1;
+    max-width: 100%;
+}
+#feed {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+#feed img {
+    height: 1em;
+    width: auto;
+    padding-left: 0.5em;
+}
+#feed-amount {
+    margin: 0 0.5em 0 0;
+    font-size: 0.8em;
+    width: 3em;
+}
+#feed-rat {
+    min-width: 4em;
+    padding: 0;
+
+    background: #5E2C38;
+    border: 1px solid #5E2C38;
+    border-radius: 0.5em;
+    color: #F6E3B0;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 0.35em 0.75em;
+    transition: 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#feed-rat:hover {
+    background: #D08D53;
+    color: #fff;
+}
+.feed-floating-number {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #8CDF7B;
+    text-shadow: -1px 0 #135d3a, 0 1px #135d3a, 1px 0 #135d3a, 0 -1px #135d3a;
+}
+.user-page .profile-stats p {
+    margin: 0;
+    color: #5E2C38;
+    padding: 0.2em 0;
+}
+.user-page .profile-challenges {
+    padding-top: 2em;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+.user-page .profile-menu {
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-page h2 {
+    color: #D08D53;
+    font-weight: normal;
+}
+.user-page .profile-menu ul {
+    padding: 0;
+}
+.user-page .profile-menu ul li {
+    color: #529EAF;
+    cursor: pointer;
+}
+.user-page .profile-menu ul li:hover {
+    color: tomato;
+}
+.user-page .profile-menu svg {
+    vertical-align: middle;
+}
+.user-page .profile-menu svg path {
+    fill: #529EAF;
+}
+.user-page .profile-menu a:hover svg path {
+    fill: tomato;
+}
+.user-page .profile-menu li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 1em;    
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.change-avatar-trigger {
+    cursor: pointer;
+}
+
+.settings {
+    text-align: center;
+}
+.settings h3 {
+    color: #5E2C38;
+}
+.settings form {
+    padding: 1em 0 2em 0;
+    border-bottom: 1px solid #eee;
+    display: none;
+}
+.settings input {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    header nav .mobile-menu {
+        display: none;
+    }
+    header nav .menu-closed {
+        display: block;
+    }
+    .alert-box {
+        left: 15%;
+        width: 70% !important;
+    }
+
+    #about > div > div {
+        max-width: 100%;
+        padding: 0 2em;
+    }
+    #about img {
+        max-width: 90%;
+    }
+    #community div, #community a {
+        padding: 0;
+    }
+    #community a img {
+        max-width: 5em;
+    }
+    #community a p {
+        font-size: 1em;
+    }
+
+    #challenge-summary img {
+        max-width: 100%;
+    }
+    #challenge-summary > div {
+        max-width: 100%;
+    }
+
+    #collection .nfts .element {
+        width: 27%;
+    }
+    #collection .nfts .element:nth-child(-n + 9 of .element) {
+        display: none;
+    }
+    #collection .sync {
+        text-align: center;
+    }
+
+    #roadmap {
+        flex-direction: column-reverse;
+    }
+    #roadmap > div {
+        max-width: 100%;
+    }
+    #roadmap img {
+        max-width: 100%;
+    }
+
+    .user-page > .profile-name {
+        font-size: 1em;
+    }
+    .user-page .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .user-page .profile svg {
+        width: 100%;
+    }
+    .user-page .profile-info {
+        flex-direction: column-reverse;
+        width: 90%;
+        text-align: center;
+    }
+    .user-page .profile-info .profile-name {
+        padding: 0;
+        text-align: center;
+    }
+    #feed {
+        justify-content: center;
+    }
+
+    
+    #challenges article {
+        padding: 2em;
+    }
+    #challenges article img {
+        max-width: 90%;
+        padding: 0;
+    }
+    #user-entries > div {
+        padding: 1em 0.5em;
+    }
+    #user-entries > div .rank {
+        padding-right: 0.5em;
+        margin-right: 1em;
+    }
+    #user-entries > div .title {
+        padding: 0;
+    }
+}

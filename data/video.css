@@ -1,0 +1,135 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: normal;
+}
+header {
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #dedede;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+header div {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+    color: #529EAF;
+}
+a:hover {
+    color: tomato;
+}
+svg {
+    vertical-align: middle;
+    height: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+svg path {
+    fill: #529EAF;
+}
+svg:hover path {
+    fill: tomato;
+}
+main {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+}
+.youtube {
+    padding-top: 3em;
+    padding-bottom: 4em;
+}
+.youtube iframe {
+    aspect-ratio: 9 / 16;
+}
+.instagram {
+    margin-top: -10px;
+}
+.instagram iframe {
+    height: 128%;
+    aspect-ratio: 9 / 16;
+    border: 0 !important;
+}
+.tiktok {
+    align-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.tiktok blockquote {
+    margin: 0;
+}
+nav {
+    background-color: #FAFAFA;
+    border-top: 1px solid #dedede;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+nav > div {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav div a.user {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    color: #272727;
+}
+nav div a.user span {
+    color: #529EAF;
+    font-weight: bold;
+}
+nav div a.user:hover span {
+    color: tomato;
+}
+@media (max-width: 768px) {
+    nav {
+        padding-top: 0;
+    }
+    .instagram iframe {
+        min-width: auto !important;
+        width: 142%;
+    }
+}
+@media (max-width: 480px) {
+    .tiktok {
+        height: 123%;
+    }
+}
