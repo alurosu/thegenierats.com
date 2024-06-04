@@ -859,10 +859,10 @@ footer ul li {
         padding: 0;
     }
     #community a img {
-        max-width: 5em;
+        padding-left: 10px;
     }
     #community a p {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     #challenge-summary img {
@@ -934,3 +934,8 @@ footer ul li {
         padding: 0;
     }
 }
+
+.looping-animation {
+    fill: url(#img); /* Reference the pattern */
+    animation: my-animation infinite 2s ease-in-out; /* Loop forever */
+  }

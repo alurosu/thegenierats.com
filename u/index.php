@@ -98,15 +98,16 @@ $mysqli->close();
             <input type="file" name="fileToUpload" id="fileToUpload"><input type="submit" value="Upload Image" name="submit">
           </form>
         <?php } ?>
-        <div class="profile">
-          <svg viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <div class="profile pt-0 pt-md-4">
+          <img src="/data/images/site/rats/<?php echo ($rats[0]["lvl"] < 10) ? $rats[0]["lvl"] : 10; ?>.gif" alt="Rat #<?php echo sprintf('%03d', $rats[0]["id"]);?> Photo" class="d-md-none">
+          <svg viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" class="d-none d-md-block">
             <title>Rat #<?php echo sprintf('%03d', $rats[0]["id"]);?> Photo</title>
             <defs>
               <pattern id="img" patternUnits="userSpaceOnUse" width="200" height="200">
               <image xlink:href="/data/images/site/rats/<?php echo ($rats[0]["lvl"] < 10) ? $rats[0]["lvl"] : 10; ?>.gif" x="20" y="12" width="170" height="170" preserveAspectRatio="xMinYMin slice"/>
               </pattern>
             </defs>
-            <polygon class="outer-border" points="136.737609507049,188.692435121084 63.2623904929514,188.692435121084 11.3075648789165,136.737609507049 11.3075648789165,63.2623904929514 63.2623904929513,11.3075648789165 136.737609507049,11.3075648789165 188.692435121084,63.2623904929513 188.692435121084,136.737609507049" fill="url(#img)"/>
+            <polygon class="outer-border looping-animation" points="136.737609507049,188.692435121084 63.2623904929514,188.692435121084 11.3075648789165,136.737609507049 11.3075648789165,63.2623904929514 63.2623904929513,11.3075648789165 136.737609507049,11.3075648789165 188.692435121084,63.2623904929513 188.692435121084,136.737609507049" fill="url(#img)"/>
             <polygon class="inner-border" points="136.737609507049,188.692435121084 63.2623904929514,188.692435121084 11.3075648789165,136.737609507049 11.3075648789165,63.2623904929514 63.2623904929513,11.3075648789165 136.737609507049,11.3075648789165 188.692435121084,63.2623904929513 188.692435121084,136.737609507049" fill="transparent"/>
           </svg>
           <div class="profile-info">

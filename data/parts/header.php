@@ -1,6 +1,6 @@
 <header>
     <div>
-        <a href="https://thegenierats.com/" alt="thegenierats.com" title="Gamify the Real World" id="logo">
+        <a href="https://thegenierats.com/" alt="thegenierats.com" title="Gamify the Real World" id="logo" class="ps-2">
             <h1>The Genie Rats</h1>
         </a>
         <nav>
