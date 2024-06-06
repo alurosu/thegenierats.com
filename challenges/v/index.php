@@ -49,7 +49,7 @@ if (isset($_SESSION["id"])) {
         $stmt->bind_param("iis", $_SESSION["id"], $id, $verification);
         $stmt->execute();
 
-        $stmt = $mysqli->prepare("UPDATE users SET votes = votes+1 WHERE id = ?");
+        $stmt = $mysqli->prepare("UPDATE users SET votes = votes+1, coins = coins+1 WHERE id = ?");
         $stmt->bind_param("i", $info["user_id"]);
         $stmt->execute();
 
@@ -63,7 +63,7 @@ if (isset($_SESSION["id"])) {
         $stmt->bind_param("ii", $_SESSION["id"], $id);
         $stmt->execute();
 
-        $stmt = $mysqli->prepare("UPDATE users SET votes = votes-1 WHERE id = ?");
+        $stmt = $mysqli->prepare("UPDATE users SET votes = votes-1, coins = coins-1 WHERE id = ?");
         $stmt->bind_param("i", $info["user_id"]);
         $stmt->execute();
 

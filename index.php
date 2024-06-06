@@ -30,7 +30,7 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Genie Rats - Gamify the Real World and Conquer Challenges</title>
-    <meta name="description" content="Join our vibrant colony, fight boredom and own unique proof of action tokens. Redefine excitement in a world of thrilling adventures.">
+    <meta name="description" content="Join our vibrant colony, fight boredom and get cheese to feed your rat. Redefine excitement in a world of thrilling adventures.">
     <meta name="keywords" content="nft, nfts, web3, community, dao, blockchain, proof of action nfts">
     <meta name="author" content="The Genie Rats">
     <?php include 'data/parts/includes.php'; ?>    
@@ -51,24 +51,18 @@ $mysqli->close();
         </article>
         <article id="roadmap">
             <div>
-                <h2>Roadmap</h2>
-                <p>This is a rough representation of what we plan to do. <br/>We'll share detailed announcements in the updates section from <a href="/discord" target="_blank">our Discord</a> server.</p>
-                <h3>Q3 2023</h3>
+                <h2>What are challenges?</h2>
+                <p>We want to motivate people and have common goals. Let's make ourselves and the world better. To achieve this goal, we put up challenges on our website.</p>
+                <h3>How to participate?</h3>
+                <p>The process is quite straight forward. Here's how you do it:</p>
                 <ul>
-                    <li>Launch community Discord server.</li>
-                    <li>Launch merch shop for supporting members.</li>
-                    <li>Launch website.</li>
+                    <li>Make a YouTube short, TikTok or Instagram reel that proves you completed the challenge</li>
+                    <li>Login and paste your video link into <a href="/challenges/add">this form</a></li>
+                    <li>Earn cheese everytime your video gets likes</li>
+                    <li>Give cheese to your rat that grows in level, if you feed it enough</li>
                 </ul>
-                <h3>Q4 2023</h3>
-                <ul>
-                    <li>Launch generative 10000 unique profile picture NFTs.</li>
-                    <li>Add website registration and login using Discord.</li>
-                </ul>
-                <h3>Q1 2024</h3>
-                <ul>
-                    <li>Develop mobile app for challenges (Android and iOS).</li>
-                    <li>Add option to mint NFTs on multiple blockchains.</li>
-                </ul>
+                <p>We recommend using the hashtags <span class="fw-bold text-success">#ratquest</span> or <span class="fw-bold text-success">#thegenierats</span> in your video description.</p>
+                <p>more participants = more upvotes</p>
             </div>
             <img src="/data/images/site/roadmap.png" alt="TheGenieRats Roadmap" title="Let's plan this out!">
         </article>
