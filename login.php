@@ -72,7 +72,9 @@ if (isset($_POST["user"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login - The Genie Rats</title>
+    <title>Login to The Genie Rats - Enter the World of Adventures</title>
+    <meta name="description" content="Access your Genie Rats account. Dive back into a world of thrilling challenges. The adventure awaits.">
+    
     <?php include 'data/parts/includes.php'; ?>    
   </head>
   <body>

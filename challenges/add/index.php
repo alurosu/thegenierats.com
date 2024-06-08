@@ -88,6 +88,8 @@ $mysqli->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Enter the Challenge - The Genie Rats</title>
+    <meta name="description" content="Create and share new adventures with our colony. Add unique videos to keep the excitement alive and earn cheese.">
+    
     <?php include '../../data/parts/includes.php'; ?>    
   </head>
   <body>

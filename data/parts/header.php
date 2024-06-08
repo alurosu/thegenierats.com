@@ -17,7 +17,7 @@
             <img src="/data/images/site/x-solid.svg" alt="Bars" class="menu-open">
 
             <div class="mobile-menu">
-                <a href="https://www.redbubble.com/people/thegenierats/shop" rel="nofollow">Shop</a>
+                <!--<a href="https://www.redbubble.com/people/thegenierats/shop" rel="nofollow">Shop</a>-->
                 <a href="/challenges">Challenges</a>
                 
                 <a href="/discord" target="_blank">

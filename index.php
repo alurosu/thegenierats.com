@@ -31,7 +31,6 @@ $mysqli->close();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Genie Rats - Gamify the Real World and Conquer Challenges</title>
     <meta name="description" content="Join our vibrant colony, fight boredom and get cheese to feed your rat. Redefine excitement in a world of thrilling adventures.">
-    <meta name="keywords" content="nft, nfts, web3, community, dao, blockchain, proof of action nfts">
     <meta name="author" content="The Genie Rats">
     <?php include 'data/parts/includes.php'; ?>    
   </head>
@@ -75,7 +74,7 @@ $mysqli->close();
                 </a>
             </div>
         </div>
-        <article id="challenge-summary">
+        <article id="challenge-summary" class="mb-4 pb-4">
             <img src="/data/images/site/challenge_active.png" alt="TheGenieRats Challenge" title="Are you up for the task?">
             <div>
                 <p>Active Challenge:</p>
