@@ -5,7 +5,7 @@ $error = "";
 if (isset($_POST["user"])) {
   if ($_POST["user"] != "") {
     if ($_POST["pass"] != "") {
-      if (strlen($_POST["pass"]) >= 12) {
+      if (strlen($_POST["pass"]) >= 6) {
         if ($_POST["pass"] == $_POST["repass"]) {
           if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
             include "data/parts/config.php";
@@ -52,7 +52,7 @@ if (isset($_POST["user"])) {
             $mysqli->close();
           } else $error = "To which email should we send <br/>the verification code?";
         } else $error = "Make sure you type the same password <br/>in both fields.";
-      } else $error = "Password should be longer than 12 characters.";
+      } else $error = "Password should be longer than 6 characters.";
     } else $error = "Enter a password to protect yourself.";
   } else $error = "What username would you like?";
 }

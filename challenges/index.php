@@ -52,7 +52,7 @@ $mysqli->close();
                 <p>Active challenge:</p>
                 <h2><?php echo $title; ?></h2>
                 <div class="form-footer">
-                    <a href="https://thegenierats.substack.com/p/how-challenges-work" target="_blank">How it works</a>
+                    <a href="/#how-to" target="_blank">How it works</a>
                     <a href="/challenges/add" id="add-challenge-button">
                         <button>Enter</button>
                     </a>
@@ -72,7 +72,7 @@ $mysqli->close();
         <div id="user-entries">
             <?php if (!$quest_entries) { ?>
                 <p class="details">
-                    No rat has participated yet. Be the first to enter!
+                    No user has participated yet. Be the first to enter!
                 </p>
             <?php } else { ?>
                 <h2>Most Upvoted Entries</h2>

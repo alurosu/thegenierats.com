@@ -49,6 +49,7 @@ $mysqli->close();
                 </div>
             </div>
         </article>
+        <div id="how-to"></div>
         <article id="roadmap">
             <div>
                 <h2>What are challenges?</h2>
@@ -80,7 +81,7 @@ $mysqli->close();
                 <p>Active Challenge:</p>
                 <h2><?php echo $title; ?></h2>
                 <div class="form-footer">
-                    <a href="https://thegenierats.substack.com/p/how-challenges-work" target="_blank">How it works</a>
+                    <a href="/#how-to" target="_blank">How it works</a>
                     <a href="/challenges"><button>Details</button></a>
                 </div>
             </div>
