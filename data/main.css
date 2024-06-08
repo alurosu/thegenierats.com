@@ -252,6 +252,12 @@ main {
     margin-top: 1em;
 }
 
+footer {
+    padding: 3em 0em;
+    background-color: #fafafa;
+    border-top: 1px solid #dedede;
+    max-width: 100%;
+}
 footer ul {
     display: flex;
     justify-content: center;

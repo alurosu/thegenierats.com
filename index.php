@@ -44,7 +44,7 @@ $mysqli->close();
                     <h2>The Genie Rats</h2>
                     <p>An evergrowing team that wants to contribute to our society by digitally gamifying the real world. </p>
                     <h2>Our Mission</h2>
-                    <p>We plan to revolutionize the concept of entertainment and community engagement by providing an immersive experience that combines exciting challenges and exclusive NFTs.</p>
+                    <p>We plan to revolutionize the concept of entertainment and community engagement by providing an immersive experience using exciting challenges. </p>
                 </div>
             </div>
         </article>
