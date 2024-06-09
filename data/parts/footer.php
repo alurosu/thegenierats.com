@@ -31,8 +31,24 @@
             </li>
         </ul>
     </div>
-    <div class="col-12 pt-2 pb-4 fs-6 text-center text-body-secondary">&#169; The Genie Rats <?PHP echo date('Y');?></div>
+    <div class="col-12 pt-2 fs-6 text-center text-body-secondary">&#169; The Genie Rats <?PHP echo date('Y');?></div>
 </footer>
+
+<!-- cookie warning toast -->
+<div class="fixed-bottom p-2">
+    <div class="toast bg-white w-100 mw-100" role="alert" data-autohide="false">
+        <div class="toast-body py-2 px-3 d-flex align-items-center">
+            <p class="mb-0 flex-fill">
+            This website stores data such as cookies to enable site functionality including analytics and personalization. By using this website, you automatically accept that we use cookies. 
+            </p>
+            <div class="ml-auto ps-2">
+                <button type="button" class="btn btn-dark" id="btnAccept">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php if ($error) { ?>
     <div class="form-errors alert-box"><?php echo $error; ?> <span>x</span></div>
