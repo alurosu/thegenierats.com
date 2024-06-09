@@ -706,7 +706,7 @@ footer ul li {
     color: #D08D53;
     font-size: 1.3em;
 }
-.user-page .profile-stats .level {    
+.level {    
     padding: 0.5em;
     font-size: 0.9em;
     border: 1px solid #ccc;
@@ -718,7 +718,7 @@ footer ul li {
     
     box-sizing: border-box;
 }
-.user-page .profile-stats .level .bar {
+.level .bar {
     transition: 0.3s ease; 
     position: absolute;
     top: 0;

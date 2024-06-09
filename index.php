@@ -61,7 +61,7 @@ $mysqli->close();
                     <li>Earn cheese everytime your video gets likes</li>
                     <li>Give cheese to your rat that grows in level, if you feed it enough</li>
                 </ul>
-                <p>We recommend using the hashtags <span class="fw-bold text-success">#ratquest</span> or <span class="fw-bold text-success">#thegenierats</span> in your video description.</p>
+                <p>We recommend using the hashtag <span class="fw-bold text-success">#ratquest</span> or mention us <span class="fw-bold text-success">@TheGenieRats</span> in your video title / description.</p>
                 <p>more participants = more upvotes</p>
             </div>
             <img src="/data/images/site/roadmap.png" alt="TheGenieRats Roadmap" title="Let's plan this out!">

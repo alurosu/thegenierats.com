@@ -18,7 +18,9 @@
 
             <div class="mobile-menu">
                 <!--<a href="https://www.redbubble.com/people/thegenierats/shop" rel="nofollow">Shop</a>-->
+                
                 <a href="/challenges">Challenges</a>
+                <a href="/ranking">Ranking</a>
                 
                 <a href="/discord" target="_blank">
                     <img src="/data/images/site/discord.svg" alt="Discord" class="discord">
