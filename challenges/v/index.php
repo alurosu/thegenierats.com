@@ -114,7 +114,7 @@ $mysqli->close();
         <?php } else if ($info["platform"] == "instagram") { ?>
             <blockquote class="instagram-media" data-instgrm-permalink="<?php echo $info["link"];?>?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; padding:0;"></blockquote> <script async src="//www.instagram.com/embed.js"></script>
         <?php } else if ($info["platform"] == "tiktok") { ?>
-            <blockquote class="tiktok-embed flex-fill" cite="https://www.tiktok.com/@creativemonkeyz/video/7271194303974690081" data-video-id="7271194303974690081" > <section> <a target="_blank" title="" href="https://www.tiktok.com/@creativemonkeyz?refer=embed"></a> <p></p> <a target="_blank" title="" href="https://www.tiktok.com/music/original-sound-CreativeMonkeyz-7271194789516036896?refer=embed"></a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            <blockquote class="tiktok-embed" cite="<?php echo $info["link"];?>" data-video-id="7378461142902902049" style="max-width: 605px;min-width: 325px;" ><section></section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
         <?php } ?>
     </main>
     <nav class="">

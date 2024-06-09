@@ -157,9 +157,9 @@ $mysqli->close();
                 <li data-show="password">
                     Password
                 </li>
-                <li data-show="wallet">
+                <!--<li data-show="wallet">
                     Wallet
-                </li>
+                </li>-->
                 <li class="change-avatar-trigger">
                     Avatar
                 </li>

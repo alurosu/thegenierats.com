@@ -80,7 +80,7 @@ $mysqli->close();
                 <p>Active Challenge:</p>
                 <h2><?php echo $title; ?></h2>
                 <div class="form-footer">
-                    <a href="/#how-to" target="_blank">How it works</a>
+                    <a href="/#how-to">How it works</a>
                     <a href="/challenges"><button>Details</button></a>
                 </div>
             </div>

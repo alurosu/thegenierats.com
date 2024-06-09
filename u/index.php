@@ -80,7 +80,7 @@ $mysqli->close();
                 <?php } ?>
             </div>
         </div>
-        <?php if (isset($_SESSION["user"]) && $_SESSION["user"] == $user) { ?>
+        <?php if (isset($_SESSION["user"]) && strtolower($_SESSION["user"]) == strtolower($user)) { ?>
           <div class="profile-menu py-3">
               <h2 class="m-0">welcome back</h2>
               <ul class="m-0">
@@ -121,7 +121,7 @@ $mysqli->close();
                 <div class="bar" style="width: <?php echo $percentage;?>%"></div>
               </div>
             </div>
-            <?php if (isset($_SESSION["user"]) && $_SESSION["user"] == $user) { ?>
+            <?php if (isset($_SESSION["user"]) && strtolower($_SESSION["user"]) == strtolower($user)) { ?>
               <div id="feed">
                 <input type="number" min ="1" data-id="<?php echo $rats[0]["id"]; ?>" id="feed-amount" value="1" placeholder="1,2..">
                 <div id="feed-rat">
