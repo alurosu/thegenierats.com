@@ -10,7 +10,7 @@ if ($mysqli->connect_error) {
 }
 
 // get entries
-$stmt = $mysqli->prepare("SELECT r.id AS id, u.user AS user, r.lvl AS lvl, r.xp AS xp FROM rats r, users u WHERE r.user_id=u.id ORDER BY r.lvl DESC, r.xp DESC LIMIT 100");
+$stmt = $mysqli->prepare("SELECT r.id AS id, u.id AS user_id, u.user AS user, r.lvl AS lvl, r.xp AS xp FROM rats r, users u WHERE r.user_id=u.id ORDER BY r.lvl DESC, r.xp DESC, r.id LIMIT 100");
 $stmt->execute();
 $result = $stmt->get_result();
 $quest_entries = [];

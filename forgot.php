@@ -47,7 +47,32 @@ if (isset($_POST["email"])) {
 }
 
 if (isset($_GET["code"])) {
-    // verify if exists
+  // verify if exists
+  if (isset($_POST["npass"])) {
+    if (strlen($_POST["npass"]) >= 6) {
+      if ($_POST["npass"] == $_POST["npass2"]) {
+        $pass = hash('sha256', $_POST['npass']);
+        // update in database
+        include "data/parts/config.php";
+        $mysqli = new mysqli($hostname, $username, $password, $database);
+
+        if ($mysqli->connect_error) {
+            $error = "Connection failed: " . $mysqli->connect_error;
+        }
+        // Prepare the SQL statement
+        $stmt = $mysqli->prepare("UPDATE users SET pass = ? WHERE code = ?");
+  
+        // Bind parameters and execute the statement
+        $stmt->bind_param("ss", $pass, $_GET["code"]);
+        $stmt->execute();
+
+        $stmt->close();
+        $mysqli->close();
+        
+        $notice = "You changed the account password.";
+      } else $error = "Your new password doesn't match.";
+    } else $error = "New passord is too short.";
+  }
 }
 ?>
 
@@ -68,15 +93,25 @@ if (isset($_GET["code"])) {
     <?php include 'data/parts/header.php'; ?>
     <main id="register">
       <img src="/data/images/site/forgot_password.png" alt="TheGenieRats forgot password" title="Are you lost?">
-      <form action="" method="post">
-        <h2>Forgot your password?</h2>
-        <p>Enter your email and we'll help you out.<br/>If you don't have an account, <a href="/register">create one for free</a>.</p>
-        <input type="text" name="email" placeholder="Email" value="<?php echo $_POST["email"];?>">
-        <div class="form-footer">
-            <a href="/login">Back to Login</a>
-            <button>Recover</button>
-        </div>
+      <?php if (isset($_GET['code'])) { ?>
+        <form action="" id="password" method="post">
+          <h3>Change Password</h3>
+          <p>Your new password should be at least 6 characters long.</p>
+          <input type="password" name="npass" placeholder="New Password" >
+          <input type="password" name="npass2" placeholder="New Password Again" >
+          <button>Change</button>
       </form>
+      <?php } else { ?>
+        <form action="" method="post">
+          <h2>Forgot your password?</h2>
+          <p>Enter your email and we'll help you out.<br/>If you don't have an account, <a href="/register">create one for free</a>.</p>
+          <input type="text" name="email" placeholder="Email" value="<?php echo $_POST["email"];?>">
+          <div class="form-footer">
+              <a href="/login">Back to Login</a>
+              <button>Recover</button>
+          </div>
+        </form>
+      <?php } ?>
     </main>
     <?php include 'data/parts/footer.php'; ?>
   </body>

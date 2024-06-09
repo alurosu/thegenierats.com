@@ -10,10 +10,6 @@ if ($_GET["login"]=="required") {
   $notice = "You need to login before doing that.";
 }
 
-$rediurl = $_SERVER['HTTP_REFERER'];
-if (isset($_POST["rediurl"]))
-    $rediurl = $_POST["rediurl"];
-
 $error = "";
 if (isset($_POST["user"])) {
   if ($_POST["user"] != "") {
@@ -51,10 +47,7 @@ if (isset($_POST["user"])) {
         $_SESSION["coins"] = $row["coins"];
         $_SESSION["user"] = $username;
 
-        if ($rediurl == "https://thegenierats.com/")
-            header("Location: https://thegenierats.com/u/".$_SESSION["id"]);
-        else
-            header("Location: ".$rediurl);
+        header("Location: https://thegenierats.com/u/".$_SESSION["id"]);
         die();
 
         $error = "User login successfully!";
@@ -86,7 +79,6 @@ if (isset($_POST["user"])) {
           <p>Submit your info to enter.<br/>If you don't have an account, <a href="/register">create one for free</a>.</p>
           <input type="text" name="user" placeholder="Username" value="<?php echo $_POST["user"];?>">
           <input type="password" name="pass" placeholder="Password">
-          <input type="hidden" name="rediurl" value="<?php echo $rediurl; ?>" />
           <div class="form-footer">
             <a href="/forgot">Forgot password?</a>
             <button>Login</button>

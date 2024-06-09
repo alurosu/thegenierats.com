@@ -87,7 +87,7 @@ if(isset($_POST["submit"])) {
         $notice = "You changed your stargaze wallet.";
     } else $error = "Invalid stargaze wallet address.";
 } else if (isset($_POST["npass"])) {
-  if (strlen($_POST["npass"]) >= 12) {
+  if (strlen($_POST["npass"]) >= 6) {
     if ($_POST["npass"] == $_POST["npass2"]) {
       $pass = hash('sha256', $_POST['npass']);
       // Prepare the SQL statement
@@ -180,7 +180,7 @@ $mysqli->close();
             </form>
             <form action="/settings#password" id="password" method="post"  <?php if (isset($_POST["hpass"])) echo 'style="display:block;"';?>>
                 <h3>Change Password</h3>
-                <p>Your new password should be at least 12 characters long.</p>
+                <p>Your new password should be at least 6 characters long.</p>
                 <input type="password" name="npass" placeholder="New Password" >
                 <input type="password" name="npass2" placeholder="New Password Again" >
                 <input type="hidden" name="hpass" value="1">
