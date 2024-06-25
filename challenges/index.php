@@ -54,7 +54,7 @@ $mysqli->close();
                 <p>Active challenge:</p>
                 <h2><?php echo $title; ?></h2>
                 <div class="form-footer">
-                    <a href="/#how-to" target="_blank">How it works</a>
+                    <a href="/about/#how-to">How it works</a>
                     <a href="/challenges/add" id="add-challenge-button">
                         <button>Enter</button>
                     </a>

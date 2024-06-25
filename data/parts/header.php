@@ -10,7 +10,7 @@
                     <a href="" class="coins"><span><?php echo $_SESSION["coins"]; ?></span> <img src="/data/images/site/cheese.png" alt="Cheese" title="Cheese"></a>
                 </div>
             <?php } else { ?>
-                <a href="/login" class="account">Login</a>
+                <a href="/register" class="account">Register</a>
             <?php } ?>
 
             <img src="/data/images/site/bars-solid.svg" alt="Bars" class="menu-closed">
@@ -19,6 +19,7 @@
             <div class="mobile-menu">
                 <!--<a href="https://www.redbubble.com/people/thegenierats/shop" rel="nofollow">Shop</a>-->
                 
+                <a href="/about">About</a>
                 <a href="/challenges">Challenges</a>
                 <a href="/ranking">Ranking</a>
                 
