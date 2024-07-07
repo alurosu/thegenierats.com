@@ -9,7 +9,8 @@ if ($mysqli->connect_error) {
   $error = "Connection failed: " . $mysqli->connect_error;
 }
 // Prepare the SQL statement
-$stmt = $mysqli->prepare("SELECT title FROM quests ORDER BY id DESC LIMIT 1");
+$time = time();
+$stmt = $mysqli->prepare("SELECT title FROM quests WHERE ends_at > ".$time." ORDER BY id ASC LIMIT 1");
 
 // Bind parameters and execute the statement
 $stmt->execute();
