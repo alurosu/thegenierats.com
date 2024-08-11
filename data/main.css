@@ -572,9 +572,6 @@ footer ul li {
 }
 #user-entries > div .video {
     aspect-ratio: 1/1;
-    background-image: url("/data/images/users/default.png");
-    background-position: center;
-    background-size: cover;
     display: flex;    
     justify-content: center;
     align-items: center;
@@ -591,19 +588,9 @@ footer ul li {
     justify-content: center;
     align-items: center;
 }
-#user-entries > div .video svg {
-    width: 4em;
-    height: 3.5em;
-    padding: 0.65em;
-}
-#user-entries > div .video svg path{
-    fill: #00000059;
-}
-.user-page #user-entries > div a svg path {
-    fill: #529EAF;
-}
-.user-page #user-entries > div a:hover svg path {
-    fill: tomato;
+#user-entries > div .video img {
+    width: 5em;
+    height: 5em;
 }
 #user-entries > div .title {
     color: #272727;    
@@ -614,7 +601,7 @@ footer ul li {
 }
 #user-entries > div .title > * {
     display: block;
-    height: 1.2em;
+    height: 1.5em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -840,9 +827,22 @@ footer ul li {
     margin-left: auto;
     margin-right: auto;
 }
+.challenge-watch-button button {
+    font-size: 0.7em;
+    margin-left: 0.5em;
+}
+.challenge-watch-image {
+    margin-right: 0em;
+}
 
 /* mobile */
 @media (max-width: 768px) {
+    .challenge-watch-image {
+        display: none !important;
+    }
+    .challenge-watch-button button {
+        width: 5em;
+    }
     header nav .mobile-menu {
         display: none;
     }

@@ -97,7 +97,7 @@ $mysqli->close();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $info["title"]; ?> - Challenge Entry <?php echo "#".$_GET["id"]; ?></title>
     <?php include '../../data/parts/includes.php'; ?>
-    <link rel="stylesheet" href="/data/video.css"> 
+    <link rel="stylesheet" href="/data/video.css?v=2"> 
   </head>
   <body>
     <header>

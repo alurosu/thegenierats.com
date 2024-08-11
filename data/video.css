@@ -69,6 +69,8 @@ main {
 }
 .youtube iframe {
     aspect-ratio: 9 / 16;
+    height: 100%;
+    width: auto;
 }
 .instagram {
     margin-top: -54px;
